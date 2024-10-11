@@ -8,6 +8,11 @@ def canUnlockAll(boxes):
     opened[0] = True
     keys = [0]
 
+    if (type(boxes)) is not list:
+        return False
+    elif (len(boxes)) == 0:
+        return False
+
     while keys:
         current_key = keys.pop()
         for key in boxes[current_key]:
